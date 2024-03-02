@@ -1,0 +1,8 @@
+@startuml BlazorComponent
+class BlazorComponent  {
+    # <<override>> OnInitialized() : void
+    + CallRequestRefresh() : void
+    + BlazorComponent()
+}
+ComponentBase <|-- BlazorComponent
+@enduml

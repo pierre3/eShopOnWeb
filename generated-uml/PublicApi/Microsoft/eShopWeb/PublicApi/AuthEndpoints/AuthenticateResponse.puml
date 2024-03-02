@@ -1,0 +1,14 @@
+@startuml AuthenticateResponse
+!include ../BaseResponse.puml
+class AuthenticateResponse  {
+    + AuthenticateResponse(correlationId : Guid)
+    + AuthenticateResponse()
+    + Result : bool <<get>> <<set>>
+    + Token : string <<get>> <<set>>
+    + Username : string <<get>> <<set>>
+    + IsLockedOut : bool <<get>> <<set>>
+    + IsNotAllowed : bool <<get>> <<set>>
+    + RequiresTwoFactor : bool <<get>> <<set>>
+}
+BaseResponse <|-- AuthenticateResponse
+@enduml

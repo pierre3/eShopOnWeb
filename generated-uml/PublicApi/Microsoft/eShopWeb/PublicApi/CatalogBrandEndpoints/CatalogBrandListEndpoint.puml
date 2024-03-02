@@ -1,0 +1,8 @@
+@startuml CatalogBrandListEndpoint
+class CatalogBrandListEndpoint  {
+    + CatalogBrandListEndpoint(mapper : IMapper)
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(catalogBrandRepository : IRepository<CatalogBrand>) : Task<IResult>
+}
+"IEndpoint`2" "<IResult, IRepository>" <|.. CatalogBrandListEndpoint
+@enduml

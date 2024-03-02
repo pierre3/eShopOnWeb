@@ -1,0 +1,8 @@
+@startuml LoginWith2faViewModel
+class LoginWith2faViewModel  {
+    + TwoFactorCode : string? <<get>> <<set>>
+    + RememberMachine : bool <<get>> <<set>>
+    + RememberMe : bool <<get>> <<set>>
+    + LoginWith2faViewModel()
+}
+@enduml

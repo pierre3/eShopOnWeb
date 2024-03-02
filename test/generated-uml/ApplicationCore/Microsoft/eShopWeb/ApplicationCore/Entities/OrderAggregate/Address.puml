@@ -1,0 +1,10 @@
+@startuml Address
+class Address  {
+    + Street : string <<get>> <<private set>>
+    + City : string <<get>> <<private set>>
+    + State : string <<get>> <<private set>>
+    + Country : string <<get>> <<private set>>
+    + ZipCode : string <<get>> <<private set>>
+    + Address(street : string, city : string, state : string, country : string, zipcode : string)
+}
+@enduml

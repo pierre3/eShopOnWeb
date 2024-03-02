@@ -1,0 +1,10 @@
+@startuml CreateCatalogItemEndpoint
+!include ./CreateCatalogItemRequest.puml
+class CreateCatalogItemEndpoint  {
+    + CreateCatalogItemEndpoint(uriComposer : IUriComposer)
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(request : CreateCatalogItemRequest, itemRepository : IRepository<CatalogItem>) : Task<IResult>
+}
+"IEndpoint`3" "<IResult, CreateCatalogItemRequest, IRepository>" <|.. CreateCatalogItemEndpoint
+CreateCatalogItemEndpoint ..> CreateCatalogItemRequest
+@enduml

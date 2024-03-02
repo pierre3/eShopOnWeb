@@ -1,0 +1,16 @@
+@startuml OrderService
+!include ../Interfaces/IOrderService.puml
+!include ../Interfaces/IRepository`1.puml
+!include ../Interfaces/IUriComposer.puml
+!include ../Entities/OrderAggregate/Address.puml
+class OrderService  {
+    + OrderService(basketRepository : IRepository<Basket>, itemRepository : IRepository<CatalogItem>, orderRepository : IRepository<Order>, uriComposer : IUriComposer)
+    + <<async>> CreateOrderAsync(basketId : int, shippingAddress : Address) : Task
+}
+IOrderService <|.. OrderService
+OrderService ..> "<Basket>" "IRepository`1"
+OrderService ..> "<CatalogItem>" "IRepository`1"
+OrderService ..> "<Order>" "IRepository`1"
+OrderService ..> IUriComposer
+OrderService ..> Address
+@enduml

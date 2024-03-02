@@ -1,0 +1,12 @@
+@startuml ToastService
+!include ./ToastLevel.puml
+class ToastService  {
+    + <<event>> OnShow : Action<string, ToastLevel>
+    + <<event>> OnHide : Action
+    + ShowToast(message : string, level : ToastLevel) : void
+    + Dispose() : void
+    + ToastService()
+}
+IDisposable <|.. ToastService
+ToastService ..> ToastLevel
+@enduml

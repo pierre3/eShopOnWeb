@@ -1,0 +1,7 @@
+@startuml ICatalogViewModelService
+interface ICatalogViewModelService  {
+    + GetCatalogItems(pageIndex : int, itemsPage : int, brandId : int?, typeId : int?) : Task<CatalogIndexViewModel>
+    + GetBrands() : Task<IEnumerable<SelectListItem>>
+    + GetTypes() : Task<IEnumerable<SelectListItem>>
+}
+@enduml

@@ -1,0 +1,11 @@
+@startuml Buyer
+!include ../BaseEntity.puml
+!include ../../Interfaces/IAggregateRoot.puml
+class Buyer  {
+    + IdentityGuid : string <<get>> <<private set>>
+    + <<readonly>> PaymentMethods : IEnumerable<PaymentMethod> <<get>>
+    + Buyer(identity : string)
+}
+BaseEntity <|-- Buyer
+IAggregateRoot <|.. Buyer
+@enduml

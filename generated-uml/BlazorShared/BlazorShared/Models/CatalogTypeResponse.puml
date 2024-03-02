@@ -1,0 +1,10 @@
+@startuml CatalogTypeResponse
+!include ../Interfaces/ILookupDataResponse`1.puml
+!include ./CatalogType.puml
+class CatalogTypeResponse  {
+    + List : List<CatalogType> <<get>> <<set>>
+    + CatalogTypeResponse()
+}
+"ILookupDataResponse`1" "<CatalogType>" <|.. CatalogTypeResponse
+CatalogTypeResponse *-- "*" CatalogType : List
+@enduml

@@ -1,0 +1,10 @@
+@startuml IndexViewModel
+class IndexViewModel  {
+    + Username : string? <<get>> <<set>>
+    + IsEmailConfirmed : bool <<get>> <<set>>
+    + Email : string? <<get>> <<set>>
+    + PhoneNumber : string? <<get>> <<set>>
+    + StatusMessage : string? <<get>> <<set>>
+    + IndexViewModel()
+}
+@enduml

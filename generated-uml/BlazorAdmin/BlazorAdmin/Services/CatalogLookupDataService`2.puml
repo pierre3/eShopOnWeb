@@ -1,0 +1,8 @@
+@startuml CatalogLookupDataService`2
+!include ../../../BlazorShared/BlazorShared/Interfaces/ICatalogLookupDataService`1.puml
+class CatalogLookupDataService`2<TLookupData, TReponse>  {
+    + CatalogLookupDataService(httpClient : HttpClient, baseUrlConfiguration : IOptions<BaseUrlConfiguration>, logger : ILogger<CatalogLookupDataService<TLookupData, TReponse>>)
+    + <<async>> List() : Task<List<TLookupData>>
+}
+"ICatalogLookupDataService`1" <|.. "CatalogLookupDataService`2"
+@enduml

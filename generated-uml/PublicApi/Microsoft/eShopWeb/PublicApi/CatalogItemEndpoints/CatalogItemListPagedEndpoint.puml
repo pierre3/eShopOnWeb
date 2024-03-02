@@ -1,0 +1,10 @@
+@startuml CatalogItemListPagedEndpoint
+!include ./ListPagedCatalogItemRequest.puml
+class CatalogItemListPagedEndpoint  {
+    + CatalogItemListPagedEndpoint(uriComposer : IUriComposer, mapper : IMapper)
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(request : ListPagedCatalogItemRequest, itemRepository : IRepository<CatalogItem>) : Task<IResult>
+}
+"IEndpoint`3" "<IResult, ListPagedCatalogItemRequest, IRepository>" <|.. CatalogItemListPagedEndpoint
+CatalogItemListPagedEndpoint ..> ListPagedCatalogItemRequest
+@enduml

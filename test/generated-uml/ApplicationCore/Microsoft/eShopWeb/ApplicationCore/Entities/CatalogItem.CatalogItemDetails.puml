@@ -1,0 +1,16 @@
+@startuml CatalogItem::CatalogItemDetails
+struct CatalogItem::CatalogItemDetails <<sealed>> <<readonly>> <<record>>  {
+    + <<readonly>> Name : string? <<get>>
+    + <<readonly>> Description : string? <<get>>
+    + <<readonly>> Price : decimal <<get>>
+    + CatalogItemDetails(name : string?, description : string?, price : decimal)
+    + <<readonly>> <<override>> ToString() : string
+    + {static} operator !=(left : CatalogItemDetails, right : CatalogItemDetails) : bool
+    + {static} operator ==(left : CatalogItemDetails, right : CatalogItemDetails) : bool
+    + <<readonly>> <<override>> GetHashCode() : int
+    + <<readonly>> <<override>> Equals(obj : object) : bool
+    + <<readonly>> Equals(other : CatalogItemDetails) : bool
+    + CatalogItemDetails()
+}
+"IEquatable`1" "<CatalogItemDetails>" <|.. CatalogItem::CatalogItemDetails
+@enduml

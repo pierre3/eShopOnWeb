@@ -1,0 +1,5 @@
+@startuml ServicesConfiguration
+class ServicesConfiguration <<static>>  {
+    + {static} AddBlazorServices(services : IServiceCollection) : IServiceCollection
+}
+@enduml

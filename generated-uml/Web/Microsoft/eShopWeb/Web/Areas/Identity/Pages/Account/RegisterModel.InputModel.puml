@@ -1,0 +1,8 @@
+@startuml RegisterModel::InputModel
+class RegisterModel::InputModel  {
+    + Email : string? <<get>> <<set>>
+    + Password : string? <<get>> <<set>>
+    + ConfirmPassword : string? <<get>> <<set>>
+    + InputModel()
+}
+@enduml

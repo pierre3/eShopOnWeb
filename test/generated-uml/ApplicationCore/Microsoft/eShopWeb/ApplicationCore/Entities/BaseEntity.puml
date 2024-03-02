@@ -1,0 +1,6 @@
+@startuml BaseEntity
+abstract class BaseEntity  {
+    + <<virtual>> Id : int <<get>> <<protected set>>
+    # BaseEntity()
+}
+@enduml

@@ -1,0 +1,8 @@
+@startuml CatalogTypeListEndpoint
+class CatalogTypeListEndpoint  {
+    + CatalogTypeListEndpoint(mapper : IMapper)
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(catalogTypeRepository : IRepository<CatalogType>) : Task<IResult>
+}
+"IEndpoint`2" "<IResult, IRepository>" <|.. CatalogTypeListEndpoint
+@enduml

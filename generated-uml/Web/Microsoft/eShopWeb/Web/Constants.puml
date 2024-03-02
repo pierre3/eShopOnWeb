@@ -1,0 +1,8 @@
+@startuml Constants
+class Constants <<static>>  {
+    + {static} BASKET_COOKIENAME : string
+    + {static} ITEMS_PER_PAGE : int
+    + {static} DEFAULT_USERNAME : string
+    + {static} BASKET_ID : string
+}
+@enduml

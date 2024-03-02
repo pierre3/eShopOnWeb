@@ -1,0 +1,5 @@
+@startuml Constants::Roles
+class Constants::Roles <<static>>  {
+    + {static} ADMINISTRATORS : string
+}
+@enduml

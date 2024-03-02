@@ -1,0 +1,9 @@
+@startuml GetMyOrdersHandler
+!include ./GetMyOrders.puml
+class GetMyOrdersHandler  {
+    + GetMyOrdersHandler(orderRepository : IReadRepository<Order>)
+    + <<async>> Handle(request : GetMyOrders, cancellationToken : CancellationToken) : Task<IEnumerable<OrderViewModel>>
+}
+"IRequestHandler`2" "<GetMyOrders, IEnumerable>" <|.. GetMyOrdersHandler
+GetMyOrdersHandler ..> GetMyOrders
+@enduml

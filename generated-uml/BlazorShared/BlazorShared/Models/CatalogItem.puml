@@ -1,0 +1,18 @@
+@startuml CatalogItem
+class CatalogItem  {
+    + Id : int <<get>> <<set>>
+    + CatalogTypeId : int <<get>> <<set>>
+    + CatalogType : string <<get>> <<set>>
+    + CatalogBrandId : int <<get>> <<set>>
+    + CatalogBrand : string <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + Price : decimal <<get>> <<set>>
+    + PictureUri : string <<get>> <<set>>
+    + PictureBase64 : string <<get>> <<set>>
+    + PictureName : string <<get>> <<set>>
+    + {static} IsValidImage(pictureName : string, pictureBase64 : string) : string
+    + {static} <<async>> DataToBase64(fileItem : IFileListEntry) : Task<string>
+    + CatalogItem()
+}
+@enduml

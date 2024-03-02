@@ -1,0 +1,7 @@
+@startuml OrderConfiguration
+class OrderConfiguration  {
+    + Configure(builder : EntityTypeBuilder<Order>) : void
+    + OrderConfiguration()
+}
+"IEntityTypeConfiguration`1" "<Order>" <|.. OrderConfiguration
+@enduml

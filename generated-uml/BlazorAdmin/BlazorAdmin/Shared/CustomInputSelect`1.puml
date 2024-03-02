@@ -1,0 +1,7 @@
+@startuml CustomInputSelect`1
+class CustomInputSelect`1<TValue>  {
+    # <<override>> TryParseValueFromString(value : string, result : TValue, validationErrorMessage : string) : bool
+    + CustomInputSelect()
+}
+"InputSelect`1" <|-- "CustomInputSelect`1"
+@enduml

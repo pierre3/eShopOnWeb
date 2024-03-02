@@ -1,0 +1,10 @@
+@startuml CatalogItemViewModelService
+!include ../Interfaces/ICatalogItemViewModelService.puml
+!include ../ViewModels/CatalogItemViewModel.puml
+class CatalogItemViewModelService  {
+    + CatalogItemViewModelService(catalogItemRepository : IRepository<CatalogItem>)
+    + <<async>> UpdateCatalogItem(viewModel : CatalogItemViewModel) : Task
+}
+ICatalogItemViewModelService <|.. CatalogItemViewModelService
+CatalogItemViewModelService ..> CatalogItemViewModel
+@enduml

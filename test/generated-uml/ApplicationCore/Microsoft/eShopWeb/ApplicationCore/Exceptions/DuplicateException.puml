@@ -1,0 +1,6 @@
+@startuml DuplicateException
+class DuplicateException  {
+    + DuplicateException(message : string)
+}
+Exception <|-- DuplicateException
+@enduml

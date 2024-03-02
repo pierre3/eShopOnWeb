@@ -1,0 +1,22 @@
+@startuml CatalogItemService
+!include ../../../BlazorShared/BlazorShared/Interfaces/ICatalogItemService.puml
+!include ../../../BlazorShared/BlazorShared/Interfaces/ICatalogLookupDataService`1.puml
+!include ./HttpService.puml
+!include ../../../BlazorShared/BlazorShared/Models/CreateCatalogItemRequest.puml
+!include ../../../BlazorShared/BlazorShared/Models/CatalogItem.puml
+class CatalogItemService  {
+    + CatalogItemService(brandService : ICatalogLookupDataService<CatalogBrand>, typeService : ICatalogLookupDataService<CatalogType>, httpService : HttpService, logger : ILogger<CatalogItemService>)
+    + <<async>> Create(catalogItem : CreateCatalogItemRequest) : Task<CatalogItem>
+    + <<async>> Edit(catalogItem : CatalogItem) : Task<CatalogItem>
+    + <<async>> Delete(catalogItemId : int) : Task<string>
+    + <<async>> GetById(id : int) : Task<CatalogItem>
+    + <<async>> ListPaged(pageSize : int) : Task<List<CatalogItem>>
+    + <<async>> List() : Task<List<CatalogItem>>
+}
+ICatalogItemService <|.. CatalogItemService
+CatalogItemService ..> "<CatalogBrand>" "ICatalogLookupDataService`1"
+CatalogItemService ..> "<CatalogType>" "ICatalogLookupDataService`1"
+CatalogItemService ..> HttpService
+CatalogItemService ..> CreateCatalogItemRequest
+CatalogItemService ..> CatalogItem
+@enduml

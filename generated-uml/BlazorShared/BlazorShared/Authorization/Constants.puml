@@ -1,0 +1,7 @@
+@startuml Constants
+!include ./Constants.Roles.puml
+class Constants <<static>>  {
+
+}
+Constants +.. Constants::Roles
+@enduml

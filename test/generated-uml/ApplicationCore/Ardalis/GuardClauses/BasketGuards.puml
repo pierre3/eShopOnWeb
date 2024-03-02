@@ -1,0 +1,5 @@
+@startuml BasketGuards
+class BasketGuards <<static>>  {
+    + {static} EmptyBasketOnCheckout(guardClause : IGuardClause, basketItems : IReadOnlyCollection<BasketItem>) : void
+}
+@enduml

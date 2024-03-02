@@ -1,0 +1,7 @@
+@startuml CatalogContextModelSnapshot
+class CatalogContextModelSnapshot  {
+    # <<override>> BuildModel(modelBuilder : ModelBuilder) : void
+    + CatalogContextModelSnapshot()
+}
+ModelSnapshot <|-- CatalogContextModelSnapshot
+@enduml

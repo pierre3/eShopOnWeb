@@ -1,0 +1,10 @@
+@startuml CatalogViewModelService
+!include ./ICatalogViewModelService.puml
+class CatalogViewModelService  {
+    + CatalogViewModelService(loggerFactory : ILoggerFactory, itemRepository : IRepository<CatalogItem>, brandRepository : IRepository<CatalogBrand>, typeRepository : IRepository<CatalogType>, uriComposer : IUriComposer)
+    + <<async>> GetCatalogItems(pageIndex : int, itemsPage : int, brandId : int?, typeId : int?) : Task<CatalogIndexViewModel>
+    + <<async>> GetBrands() : Task<IEnumerable<SelectListItem>>
+    + <<async>> GetTypes() : Task<IEnumerable<SelectListItem>>
+}
+ICatalogViewModelService <|.. CatalogViewModelService
+@enduml

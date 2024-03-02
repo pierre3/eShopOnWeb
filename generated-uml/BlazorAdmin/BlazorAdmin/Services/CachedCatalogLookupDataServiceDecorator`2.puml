@@ -1,0 +1,10 @@
+@startuml CachedCatalogLookupDataServiceDecorator`2
+!include ../../../BlazorShared/BlazorShared/Interfaces/ICatalogLookupDataService`1.puml
+!include ./CatalogLookupDataService`2.puml
+class CachedCatalogLookupDataServiceDecorator`2<TLookupData, TReponse>  {
+    + CachedCatalogLookupDataServiceDecorator(localStorageService : ILocalStorageService, catalogTypeService : CatalogLookupDataService<TLookupData, TReponse>, logger : ILogger<CachedCatalogLookupDataServiceDecorator<TLookupData, TReponse>>)
+    + <<async>> List() : Task<List<TLookupData>>
+}
+"ICatalogLookupDataService`1" <|.. "CachedCatalogLookupDataServiceDecorator`2"
+"CachedCatalogLookupDataServiceDecorator`2" ..> "CatalogLookupDataService`2"
+@enduml

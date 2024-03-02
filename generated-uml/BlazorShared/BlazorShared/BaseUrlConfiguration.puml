@@ -1,0 +1,8 @@
+@startuml BaseUrlConfiguration
+class BaseUrlConfiguration  {
+    + {static} CONFIG_NAME : string
+    + ApiBase : string <<get>> <<set>>
+    + WebBase : string <<get>> <<set>>
+    + BaseUrlConfiguration()
+}
+@enduml

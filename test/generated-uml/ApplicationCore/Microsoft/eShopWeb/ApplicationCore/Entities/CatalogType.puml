@@ -1,0 +1,10 @@
+@startuml CatalogType
+!include ./BaseEntity.puml
+!include ../Interfaces/IAggregateRoot.puml
+class CatalogType  {
+    + Type : string <<get>> <<private set>>
+    + CatalogType(type : string)
+}
+BaseEntity <|-- CatalogType
+IAggregateRoot <|.. CatalogType
+@enduml

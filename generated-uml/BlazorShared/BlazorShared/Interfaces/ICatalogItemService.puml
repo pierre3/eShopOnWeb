@@ -1,0 +1,14 @@
+@startuml ICatalogItemService
+!include ../Models/CreateCatalogItemRequest.puml
+!include ../Models/CatalogItem.puml
+interface ICatalogItemService  {
+    + Create(catalogItem : CreateCatalogItemRequest) : Task<CatalogItem>
+    + Edit(catalogItem : CatalogItem) : Task<CatalogItem>
+    + Delete(id : int) : Task<string>
+    + GetById(id : int) : Task<CatalogItem>
+    + ListPaged(pageSize : int) : Task<List<CatalogItem>>
+    + List() : Task<List<CatalogItem>>
+}
+ICatalogItemService ..> CreateCatalogItemRequest
+ICatalogItemService ..> CatalogItem
+@enduml

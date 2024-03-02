@@ -1,0 +1,6 @@
+@startuml BasketComponentViewModel
+class BasketComponentViewModel  {
+    + ItemsCount : int <<get>> <<set>>
+    + BasketComponentViewModel()
+}
+@enduml

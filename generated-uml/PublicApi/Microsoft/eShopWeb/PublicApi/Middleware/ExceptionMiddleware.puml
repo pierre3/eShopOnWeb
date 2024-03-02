@@ -1,0 +1,6 @@
+@startuml ExceptionMiddleware
+class ExceptionMiddleware  {
+    + ExceptionMiddleware(next : RequestDelegate)
+    + <<async>> InvokeAsync(httpContext : HttpContext) : Task
+}
+@enduml

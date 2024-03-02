@@ -1,0 +1,12 @@
+@startuml CachedCatalogViewModelService
+!include ./ICatalogViewModelService.puml
+!include ./CatalogViewModelService.puml
+class CachedCatalogViewModelService  {
+    + CachedCatalogViewModelService(cache : IMemoryCache, catalogViewModelService : CatalogViewModelService)
+    + <<async>> GetBrands() : Task<IEnumerable<SelectListItem>>
+    + <<async>> GetCatalogItems(pageIndex : int, itemsPage : int, brandId : int?, typeId : int?) : Task<CatalogIndexViewModel>
+    + <<async>> GetTypes() : Task<IEnumerable<SelectListItem>>
+}
+ICatalogViewModelService <|.. CachedCatalogViewModelService
+CachedCatalogViewModelService ..> CatalogViewModelService
+@enduml

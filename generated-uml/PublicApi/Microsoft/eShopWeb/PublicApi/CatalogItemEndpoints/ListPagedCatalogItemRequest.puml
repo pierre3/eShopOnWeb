@@ -1,0 +1,11 @@
+@startuml ListPagedCatalogItemRequest
+!include ../BaseRequest.puml
+class ListPagedCatalogItemRequest  {
+    + PageSize : int <<get>> <<set>>
+    + PageIndex : int <<get>> <<set>>
+    + CatalogBrandId : int? <<get>> <<set>>
+    + CatalogTypeId : int? <<get>> <<set>>
+    + ListPagedCatalogItemRequest(pageSize : int?, pageIndex : int?, catalogBrandId : int?, catalogTypeId : int?)
+}
+BaseRequest <|-- ListPagedCatalogItemRequest
+@enduml

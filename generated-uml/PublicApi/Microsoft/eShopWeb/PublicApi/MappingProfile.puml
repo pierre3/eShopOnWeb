@@ -1,0 +1,6 @@
+@startuml MappingProfile
+class MappingProfile  {
+    + MappingProfile()
+}
+Profile <|-- MappingProfile
+@enduml

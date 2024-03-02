@@ -1,0 +1,7 @@
+@startuml ICatalogItemViewModelService
+!include ../ViewModels/CatalogItemViewModel.puml
+interface ICatalogItemViewModelService  {
+    + UpdateCatalogItem(viewModel : CatalogItemViewModel) : Task
+}
+ICatalogItemViewModelService ..> CatalogItemViewModel
+@enduml

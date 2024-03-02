@@ -1,0 +1,6 @@
+@startuml OrderWithItemsByIdSpec
+class OrderWithItemsByIdSpec  {
+    + OrderWithItemsByIdSpec(orderId : int)
+}
+"Specification`1" "<Order>" <|-- OrderWithItemsByIdSpec
+@enduml

@@ -1,0 +1,12 @@
+@startuml CatalogItemDto
+class CatalogItemDto  {
+    + Id : int <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + Price : decimal <<get>> <<set>>
+    + PictureUri : string <<get>> <<set>>
+    + CatalogTypeId : int <<get>> <<set>>
+    + CatalogBrandId : int <<get>> <<set>>
+    + CatalogItemDto()
+}
+@enduml

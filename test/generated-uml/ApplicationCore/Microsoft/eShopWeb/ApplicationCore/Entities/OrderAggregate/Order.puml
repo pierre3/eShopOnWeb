@@ -1,0 +1,19 @@
+@startuml Order
+!include ../BaseEntity.puml
+!include ../../Interfaces/IAggregateRoot.puml
+!include ./Address.puml
+!include ./OrderItem.puml
+class Order  {
+    + Order(buyerId : string, shipToAddress : Address, items : List<OrderItem>)
+    + BuyerId : string <<get>> <<private set>>
+    + OrderDate : DateTimeOffset <<get>> <<private set>>
+    + ShipToAddress : Address <<get>> <<private set>>
+    + <<readonly>> OrderItems : IReadOnlyCollection<OrderItem> <<get>>
+    + Total() : decimal
+}
+BaseEntity <|-- Order
+IAggregateRoot <|.. Order
+Order ..> Address
+Order o-- Address : ShipToAddress
+Order o-- "*" OrderItem : OrderItems
+@enduml

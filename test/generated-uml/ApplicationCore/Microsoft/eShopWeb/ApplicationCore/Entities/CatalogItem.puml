@@ -1,0 +1,28 @@
+@startuml CatalogItem
+!include ./BaseEntity.puml
+!include ../Interfaces/IAggregateRoot.puml
+!include ./CatalogType.puml
+!include ./CatalogBrand.puml
+!include ./CatalogItem.CatalogItemDetails.puml
+class CatalogItem  {
+    + Name : string <<get>> <<private set>>
+    + Description : string <<get>> <<private set>>
+    + Price : decimal <<get>> <<private set>>
+    + PictureUri : string <<get>> <<private set>>
+    + CatalogTypeId : int <<get>> <<private set>>
+    + CatalogType : CatalogType? <<get>> <<private set>>
+    + CatalogBrandId : int <<get>> <<private set>>
+    + CatalogBrand : CatalogBrand? <<get>> <<private set>>
+    + CatalogItem(catalogTypeId : int, catalogBrandId : int, description : string, name : string, price : decimal, pictureUri : string)
+    + UpdateDetails(details : CatalogItemDetails) : void
+    + UpdateBrand(catalogBrandId : int) : void
+    + UpdateType(catalogTypeId : int) : void
+    + UpdatePictureUri(pictureName : string) : void
+}
+BaseEntity <|-- CatalogItem
+IAggregateRoot <|.. CatalogItem
+CatalogItem o-- CatalogType : CatalogType
+CatalogItem o-- CatalogBrand : CatalogBrand
+CatalogItem ..> CatalogItem::CatalogItemDetails
+CatalogItem +.. CatalogItem::CatalogItemDetails
+@enduml

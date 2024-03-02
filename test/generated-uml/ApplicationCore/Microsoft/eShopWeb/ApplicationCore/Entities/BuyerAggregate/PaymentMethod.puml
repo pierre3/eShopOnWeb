@@ -1,0 +1,10 @@
+@startuml PaymentMethod
+!include ../BaseEntity.puml
+class PaymentMethod  {
+    + Alias : string? <<get>> <<private set>>
+    + CardId : string? <<get>> <<private set>>
+    + Last4 : string? <<get>> <<private set>>
+    + PaymentMethod()
+}
+BaseEntity <|-- PaymentMethod
+@enduml

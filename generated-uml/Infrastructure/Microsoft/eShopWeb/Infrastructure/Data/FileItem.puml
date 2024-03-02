@@ -1,0 +1,11 @@
+@startuml FileItem
+class FileItem  {
+    + FileName : string? <<get>> <<set>>
+    + Url : string? <<get>> <<set>>
+    + Size : long <<get>> <<set>>
+    + Ext : string? <<get>> <<set>>
+    + Type : string? <<get>> <<set>>
+    + DataBase64 : string? <<get>> <<set>>
+    + FileItem()
+}
+@enduml

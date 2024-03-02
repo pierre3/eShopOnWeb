@@ -1,0 +1,7 @@
+@startuml RemoveLoginViewModel
+class RemoveLoginViewModel  {
+    + LoginProvider : string <<get>> <<set>>
+    + ProviderKey : string <<get>> <<set>>
+    + RemoveLoginViewModel()
+}
+@enduml

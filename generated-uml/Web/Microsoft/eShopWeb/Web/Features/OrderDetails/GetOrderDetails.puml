@@ -1,0 +1,8 @@
+@startuml GetOrderDetails
+class GetOrderDetails  {
+    + UserName : string <<get>> <<set>>
+    + OrderId : int <<get>> <<set>>
+    + GetOrderDetails(userName : string, orderId : int)
+}
+"IRequest`1" "<OrderDetailViewModel>" <|.. GetOrderDetails
+@enduml

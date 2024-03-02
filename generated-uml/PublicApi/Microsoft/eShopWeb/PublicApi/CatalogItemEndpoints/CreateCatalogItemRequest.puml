@@ -1,0 +1,15 @@
+@startuml CreateCatalogItemRequest
+!include ../BaseRequest.puml
+class CreateCatalogItemRequest  {
+    + CatalogBrandId : int <<get>> <<set>>
+    + CatalogTypeId : int <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + PictureUri : string <<get>> <<set>>
+    + PictureBase64 : string <<get>> <<set>>
+    + PictureName : string <<get>> <<set>>
+    + Price : decimal <<get>> <<set>>
+    + CreateCatalogItemRequest()
+}
+BaseRequest <|-- CreateCatalogItemRequest
+@enduml

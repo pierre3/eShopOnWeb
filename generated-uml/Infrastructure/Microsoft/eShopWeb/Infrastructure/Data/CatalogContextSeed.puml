@@ -1,0 +1,8 @@
+@startuml CatalogContextSeed
+!include ./CatalogContext.puml
+class CatalogContextSeed  {
+    + {static} <<async>> SeedAsync(catalogContext : CatalogContext, logger : ILogger, retry : int) : Task
+    + CatalogContextSeed()
+}
+CatalogContextSeed ..> CatalogContext
+@enduml

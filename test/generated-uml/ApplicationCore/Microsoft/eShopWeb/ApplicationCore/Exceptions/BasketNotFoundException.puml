@@ -1,0 +1,6 @@
+@startuml BasketNotFoundException
+class BasketNotFoundException  {
+    + BasketNotFoundException(basketId : int)
+}
+Exception <|-- BasketNotFoundException
+@enduml

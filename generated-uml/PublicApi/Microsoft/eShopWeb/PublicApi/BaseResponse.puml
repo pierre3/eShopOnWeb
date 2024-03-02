@@ -1,0 +1,8 @@
+@startuml BaseResponse
+!include ./BaseMessage.puml
+abstract class BaseResponse  {
+    + BaseResponse(correlationId : Guid)
+    + BaseResponse()
+}
+BaseMessage <|-- BaseResponse
+@enduml

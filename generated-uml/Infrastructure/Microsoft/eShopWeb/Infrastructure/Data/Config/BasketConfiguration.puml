@@ -1,0 +1,7 @@
+@startuml BasketConfiguration
+class BasketConfiguration  {
+    + Configure(builder : EntityTypeBuilder<Basket>) : void
+    + BasketConfiguration()
+}
+"IEntityTypeConfiguration`1" "<Basket>" <|.. BasketConfiguration
+@enduml

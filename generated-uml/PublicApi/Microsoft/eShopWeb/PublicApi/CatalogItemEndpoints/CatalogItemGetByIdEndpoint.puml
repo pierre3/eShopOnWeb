@@ -1,0 +1,10 @@
+@startuml CatalogItemGetByIdEndpoint
+!include ./GetByIdCatalogItemRequest.puml
+class CatalogItemGetByIdEndpoint  {
+    + CatalogItemGetByIdEndpoint(uriComposer : IUriComposer)
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(request : GetByIdCatalogItemRequest, itemRepository : IRepository<CatalogItem>) : Task<IResult>
+}
+"IEndpoint`3" "<IResult, GetByIdCatalogItemRequest, IRepository>" <|.. CatalogItemGetByIdEndpoint
+CatalogItemGetByIdEndpoint ..> GetByIdCatalogItemRequest
+@enduml

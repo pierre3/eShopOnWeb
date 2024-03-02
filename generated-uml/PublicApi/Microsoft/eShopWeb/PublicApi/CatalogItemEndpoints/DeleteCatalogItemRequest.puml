@@ -1,0 +1,8 @@
+@startuml DeleteCatalogItemRequest
+!include ../BaseRequest.puml
+class DeleteCatalogItemRequest  {
+    + CatalogItemId : int <<get>> <<set>>
+    + DeleteCatalogItemRequest(catalogItemId : int)
+}
+BaseRequest <|-- DeleteCatalogItemRequest
+@enduml

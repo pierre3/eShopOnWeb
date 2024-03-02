@@ -1,0 +1,38 @@
+@startuml ManageController
+!include ../ViewModels/Manage/IndexViewModel.puml
+!include ../ViewModels/Manage/ChangePasswordViewModel.puml
+!include ../ViewModels/Manage/SetPasswordViewModel.puml
+!include ../ViewModels/Manage/RemoveLoginViewModel.puml
+!include ../ViewModels/Manage/EnableAuthenticatorViewModel.puml
+class ManageController  {
+    + ManageController(userManager : UserManager<ApplicationUser>, signInManager : SignInManager<ApplicationUser>, emailSender : IEmailSender, logger : IAppLogger<ManageController>, urlEncoder : UrlEncoder)
+    + StatusMessage : string? <<get>> <<set>>
+    + <<async>> MyAccount() : Task<IActionResult>
+    + <<async>> MyAccount(model : IndexViewModel) : Task<IActionResult>
+    + <<async>> SendVerificationEmail(model : IndexViewModel) : Task<IActionResult>
+    + <<async>> ChangePassword() : Task<IActionResult>
+    + <<async>> ChangePassword(model : ChangePasswordViewModel) : Task<IActionResult>
+    + <<async>> SetPassword() : Task<IActionResult>
+    + <<async>> SetPassword(model : SetPasswordViewModel) : Task<IActionResult>
+    + <<async>> ExternalLogins() : Task<IActionResult>
+    + <<async>> LinkLogin(provider : string) : Task<IActionResult>
+    + <<async>> LinkLoginCallback() : Task<IActionResult>
+    + <<async>> RemoveLogin(model : RemoveLoginViewModel) : Task<IActionResult>
+    + <<async>> TwoFactorAuthentication() : Task<IActionResult>
+    + <<async>> Disable2faWarning() : Task<IActionResult>
+    + <<async>> Disable2fa() : Task<IActionResult>
+    + <<async>> EnableAuthenticator() : Task<IActionResult>
+    + ShowRecoveryCodes() : IActionResult
+    + <<async>> EnableAuthenticator(model : EnableAuthenticatorViewModel) : Task<IActionResult>
+    + ResetAuthenticatorWarning() : IActionResult
+    + <<async>> ResetAuthenticator() : Task<IActionResult>
+    + <<async>> GenerateRecoveryCodes() : Task<IActionResult>
+    + <<async>> GenerateRecoveryCodesWarning() : Task<IActionResult>
+}
+Controller <|-- ManageController
+ManageController ..> IndexViewModel
+ManageController ..> ChangePasswordViewModel
+ManageController ..> SetPasswordViewModel
+ManageController ..> RemoveLoginViewModel
+ManageController ..> EnableAuthenticatorViewModel
+@enduml

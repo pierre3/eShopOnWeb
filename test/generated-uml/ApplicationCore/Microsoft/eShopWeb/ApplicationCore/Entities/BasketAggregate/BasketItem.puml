@@ -1,0 +1,13 @@
+@startuml BasketItem
+!include ../BaseEntity.puml
+class BasketItem  {
+    + UnitPrice : decimal <<get>> <<private set>>
+    + Quantity : int <<get>> <<private set>>
+    + CatalogItemId : int <<get>> <<private set>>
+    + BasketId : int <<get>> <<private set>>
+    + BasketItem(catalogItemId : int, quantity : int, unitPrice : decimal)
+    + AddQuantity(quantity : int) : void
+    + SetQuantity(quantity : int) : void
+}
+BaseEntity <|-- BasketItem
+@enduml

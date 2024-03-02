@@ -1,0 +1,9 @@
+@startuml FixBuyerId
+class FixBuyerId  {
+    # <<override>> BuildTargetModel(modelBuilder : ModelBuilder) : void
+    # <<override>> Up(migrationBuilder : MigrationBuilder) : void
+    # <<override>> Down(migrationBuilder : MigrationBuilder) : void
+    + FixBuyerId()
+}
+Migration <|-- FixBuyerId
+@enduml

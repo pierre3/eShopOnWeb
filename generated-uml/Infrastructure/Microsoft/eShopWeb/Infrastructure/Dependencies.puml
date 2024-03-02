@@ -1,0 +1,5 @@
+@startuml Dependencies
+class Dependencies <<static>>  {
+    + {static} ConfigureServices(configuration : IConfiguration, services : IServiceCollection) : void
+}
+@enduml

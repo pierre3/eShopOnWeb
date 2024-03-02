@@ -1,0 +1,13 @@
+@startuml RegisterModel
+!include ./RegisterModel.InputModel.puml
+class RegisterModel  {
+    + RegisterModel(userManager : UserManager<ApplicationUser>, signInManager : SignInManager<ApplicationUser>, logger : ILogger<RegisterModel>, emailSender : IEmailSender)
+    + <<required>> Input : InputModel <<get>> <<set>>
+    + ReturnUrl : string? <<get>> <<set>>
+    + OnGet(returnUrl : string?) : void
+    + <<async>> OnPostAsync(returnUrl : string?) : Task<IActionResult>
+}
+PageModel <|-- RegisterModel
+RegisterModel o-- RegisterModel::InputModel : Input
+RegisterModel +.. RegisterModel::InputModel
+@enduml

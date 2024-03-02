@@ -1,0 +1,11 @@
+@startuml OrderItemViewModel
+class OrderItemViewModel  {
+    + ProductId : int <<get>> <<set>>
+    + ProductName : string? <<get>> <<set>>
+    + UnitPrice : decimal <<get>> <<set>>
+    + <<readonly>> Discount : decimal <<get>>
+    + Units : int <<get>> <<set>>
+    + PictureUrl : string? <<get>> <<set>>
+    + OrderItemViewModel()
+}
+@enduml

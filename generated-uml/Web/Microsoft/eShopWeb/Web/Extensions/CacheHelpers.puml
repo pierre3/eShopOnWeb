@@ -1,0 +1,8 @@
+@startuml CacheHelpers
+class CacheHelpers <<static>>  {
+    + {static} <<readonly>> DefaultCacheDuration : TimeSpan
+    + {static} GenerateCatalogItemCacheKey(pageIndex : int, itemsPage : int, brandId : int?, typeId : int?) : string
+    + {static} GenerateBrandsCacheKey() : string
+    + {static} GenerateTypesCacheKey() : string
+}
+@enduml

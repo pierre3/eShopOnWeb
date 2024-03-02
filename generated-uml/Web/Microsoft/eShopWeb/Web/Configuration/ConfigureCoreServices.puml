@@ -1,0 +1,5 @@
+@startuml ConfigureCoreServices
+class ConfigureCoreServices <<static>>  {
+    + {static} AddCoreServices(services : IServiceCollection, configuration : IConfiguration) : IServiceCollection
+}
+@enduml

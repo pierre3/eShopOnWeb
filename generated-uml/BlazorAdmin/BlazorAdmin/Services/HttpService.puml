@@ -1,0 +1,11 @@
+@startuml HttpService
+!include ./ToastService.puml
+class HttpService  {
+    + HttpService(httpClient : HttpClient, baseUrlConfiguration : IOptions<BaseUrlConfiguration>, toastService : ToastService)
+    + <<async>> HttpGet<T>(uri : string) : Task<T>
+    + <<async>> HttpDelete<T>(uri : string, id : int) : Task<T>
+    + <<async>> HttpPost<T>(uri : string, dataToSend : object) : Task<T>
+    + <<async>> HttpPut<T>(uri : string, dataToSend : object) : Task<T>
+}
+HttpService ..> ToastService
+@enduml

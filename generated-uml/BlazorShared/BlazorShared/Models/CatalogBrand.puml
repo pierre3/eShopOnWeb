@@ -1,0 +1,7 @@
+@startuml CatalogBrand
+!include ./LookupData.puml
+class CatalogBrand  {
+    + CatalogBrand()
+}
+LookupData <|-- CatalogBrand
+@enduml

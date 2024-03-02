@@ -1,0 +1,7 @@
+@startuml Css
+class Css  {
+    + Css(jsRuntime : IJSRuntime)
+    + <<async>> ShowBodyOverflow() : Task
+    + <<async>> HideBodyOverflow() : Task<string>
+}
+@enduml

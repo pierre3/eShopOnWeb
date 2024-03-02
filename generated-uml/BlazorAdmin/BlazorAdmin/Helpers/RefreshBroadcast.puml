@@ -1,0 +1,7 @@
+@startuml RefreshBroadcast
+class RefreshBroadcast <<sealed>>  {
+    + {static} <<readonly>> Instance : RefreshBroadcast <<get>>
+    + <<event>> RefreshRequested : Action
+    + CallRequestRefresh() : void
+}
+@enduml

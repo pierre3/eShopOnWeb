@@ -1,0 +1,11 @@
+@startuml ListCatalogBrandsResponse
+!include ../BaseResponse.puml
+!include ./CatalogBrandDto.puml
+class ListCatalogBrandsResponse  {
+    + ListCatalogBrandsResponse(correlationId : Guid)
+    + ListCatalogBrandsResponse()
+    + CatalogBrands : List<CatalogBrandDto> <<get>> <<set>>
+}
+BaseResponse <|-- ListCatalogBrandsResponse
+ListCatalogBrandsResponse *-- "*" CatalogBrandDto : CatalogBrands
+@enduml

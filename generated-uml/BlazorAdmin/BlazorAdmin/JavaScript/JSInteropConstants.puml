@@ -1,0 +1,9 @@
+@startuml JSInteropConstants
+class JSInteropConstants <<static>>  {
+    + {static} <<readonly>> DeleteCookie : string <<get>>
+    + {static} <<readonly>> GetCookie : string <<get>>
+    + {static} <<readonly>> RouteOutside : string <<get>>
+    + {static} <<readonly>> HideBodyOverflow : string <<get>>
+    + {static} <<readonly>> ShowBodyOverflow : string <<get>>
+}
+@enduml

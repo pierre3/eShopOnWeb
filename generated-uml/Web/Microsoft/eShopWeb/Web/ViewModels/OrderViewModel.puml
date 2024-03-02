@@ -1,0 +1,10 @@
+@startuml OrderViewModel
+class OrderViewModel  {
+    + OrderNumber : int <<get>> <<set>>
+    + OrderDate : DateTimeOffset <<get>> <<set>>
+    + Total : decimal <<get>> <<set>>
+    + <<readonly>> Status : string <<get>>
+    + ShippingAddress : Address? <<get>> <<set>>
+    + OrderViewModel()
+}
+@enduml

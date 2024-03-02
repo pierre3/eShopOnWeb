@@ -1,0 +1,6 @@
+@startuml JsonExtensions
+class JsonExtensions <<static>>  {
+    + {static} FromJson<T>(json : string) : T?
+    + {static} ToJson<T>(obj : T) : string
+}
+@enduml

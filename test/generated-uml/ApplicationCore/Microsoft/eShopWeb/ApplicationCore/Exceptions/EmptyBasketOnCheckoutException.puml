@@ -1,0 +1,9 @@
+@startuml EmptyBasketOnCheckoutException
+class EmptyBasketOnCheckoutException  {
+    + EmptyBasketOnCheckoutException()
+    # EmptyBasketOnCheckoutException(info : SerializationInfo, context : StreamingContext)
+    + EmptyBasketOnCheckoutException(message : string)
+    + EmptyBasketOnCheckoutException(message : string, innerException : Exception)
+}
+Exception <|-- EmptyBasketOnCheckoutException
+@enduml

@@ -1,0 +1,10 @@
+@startuml CatalogBrand
+!include ./BaseEntity.puml
+!include ../Interfaces/IAggregateRoot.puml
+class CatalogBrand  {
+    + Brand : string <<get>> <<private set>>
+    + CatalogBrand(brand : string)
+}
+BaseEntity <|-- CatalogBrand
+IAggregateRoot <|.. CatalogBrand
+@enduml

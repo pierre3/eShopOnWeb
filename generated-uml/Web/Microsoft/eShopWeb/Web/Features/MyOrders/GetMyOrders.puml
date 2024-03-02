@@ -1,0 +1,7 @@
+@startuml GetMyOrders
+class GetMyOrders  {
+    + UserName : string <<get>> <<set>>
+    + GetMyOrders(userName : string)
+}
+"IRequest`1" "<IEnumerable>" <|.. GetMyOrders
+@enduml

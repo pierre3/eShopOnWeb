@@ -1,0 +1,8 @@
+@startuml EditCatalogItemResult
+!include ./CatalogItem.puml
+class EditCatalogItemResult  {
+    + CatalogItem : CatalogItem <<get>> <<set>>
+    + EditCatalogItemResult()
+}
+EditCatalogItemResult *-- CatalogItem : CatalogItem
+@enduml

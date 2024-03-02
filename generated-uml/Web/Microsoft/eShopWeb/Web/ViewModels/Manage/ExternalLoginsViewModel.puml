@@ -1,0 +1,9 @@
+@startuml ExternalLoginsViewModel
+class ExternalLoginsViewModel  {
+    + CurrentLogins : IList<UserLoginInfo>? <<get>> <<set>>
+    + OtherLogins : IList<AuthenticationScheme>? <<get>> <<set>>
+    + ShowRemoveButton : bool <<get>> <<set>>
+    + StatusMessage : string? <<get>> <<set>>
+    + ExternalLoginsViewModel()
+}
+@enduml

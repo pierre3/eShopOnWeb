@@ -1,0 +1,10 @@
+@startuml DeleteCatalogItemEndpoint
+!include ./DeleteCatalogItemRequest.puml
+class DeleteCatalogItemEndpoint  {
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(request : DeleteCatalogItemRequest, itemRepository : IRepository<CatalogItem>) : Task<IResult>
+    + DeleteCatalogItemEndpoint()
+}
+"IEndpoint`3" "<IResult, DeleteCatalogItemRequest, IRepository>" <|.. DeleteCatalogItemEndpoint
+DeleteCatalogItemEndpoint ..> DeleteCatalogItemRequest
+@enduml

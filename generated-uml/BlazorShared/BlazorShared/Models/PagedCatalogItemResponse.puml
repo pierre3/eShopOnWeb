@@ -1,0 +1,9 @@
+@startuml PagedCatalogItemResponse
+!include ./CatalogItem.puml
+class PagedCatalogItemResponse  {
+    + CatalogItems : List<CatalogItem> <<get>> <<set>>
+    + PageCount : int <<get>> <<set>>
+    + PagedCatalogItemResponse()
+}
+PagedCatalogItemResponse *-- "*" CatalogItem : CatalogItems
+@enduml

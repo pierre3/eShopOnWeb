@@ -3,11 +3,30 @@
   <PropertyGroup>  
     <RootNamespace>BlazorShared</RootNamespace>
     <AssemblyName>BlazorShared</AssemblyName>
+    <Configurations>Debug;Release;GenerateUML</Configurations>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GenerateUML|AnyCPU'">
+    <DefineConstants>$(DefineConstants);GENERATE_PLANTUML</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <CompilerVisibleProperty Include="PlantUmlGenerator_OutputDir" />
+    <CompilerVisibleProperty Include="PlantUmlGenerator_AttributeRequierd" />
+    <CompilerVisibleProperty Include="PlantUmlGenerator_IncludeMemberAccessibilities" />
+    <CompilerVisibleProperty Include="PlantUmlGenerator_ExcludeMemberAccessibilities" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PlantUmlGenerator_OutputDir>$(SolutionDir)generated-uml</PlantUmlGenerator_OutputDir>
+    <PlantUmlGenerator_AttributeRequierd>false</PlantUmlGenerator_AttributeRequierd>
+    <PlantUmlGenerator_IncludeMemberAccessibilities>Public,Protected</PlantUmlGenerator_IncludeMemberAccessibilities>
+    <PlantUmlGenerator_ExcludeMemberAccessibilities>None</PlantUmlGenerator_ExcludeMemberAccessibilities>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BlazorInputFile" />
     <PackageReference Include="FluentValidation" />
+    <PackageReference Include="PlantUmlClassDiagramGenerator.SourceGenerator">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

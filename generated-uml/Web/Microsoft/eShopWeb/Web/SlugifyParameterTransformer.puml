@@ -1,0 +1,7 @@
+@startuml SlugifyParameterTransformer
+class SlugifyParameterTransformer  {
+    + TransformOutbound(value : object?) : string?
+    + SlugifyParameterTransformer()
+}
+IOutboundParameterTransformer <|.. SlugifyParameterTransformer
+@enduml

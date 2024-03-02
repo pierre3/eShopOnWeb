@@ -1,0 +1,8 @@
+@startuml OrderController
+class OrderController  {
+    + OrderController(mediator : IMediator)
+    + <<async>> MyOrders() : Task<IActionResult>
+    + <<async>> Detail(orderId : int) : Task<IActionResult>
+}
+Controller <|-- OrderController
+@enduml

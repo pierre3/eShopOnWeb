@@ -1,0 +1,6 @@
+@startuml IRepository`1
+interface IRepository`1<T>  {
+
+}
+"IRepositoryBase`1" <|.. "IRepository`1"
+@enduml

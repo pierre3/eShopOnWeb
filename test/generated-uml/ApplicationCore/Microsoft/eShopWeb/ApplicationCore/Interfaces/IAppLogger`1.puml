@@ -1,0 +1,6 @@
+@startuml IAppLogger`1
+interface IAppLogger`1<T>  {
+    + LogInformation(message : string, args : object[]) : void
+    + LogWarning(message : string, args : object[]) : void
+}
+@enduml

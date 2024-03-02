@@ -1,0 +1,10 @@
+@startuml BasketViewModelService
+!include ../Interfaces/IBasketViewModelService.puml
+class BasketViewModelService  {
+    + BasketViewModelService(basketRepository : IRepository<Basket>, itemRepository : IRepository<CatalogItem>, uriComposer : IUriComposer, basketQueryService : IBasketQueryService)
+    + <<async>> GetOrCreateBasketForUser(userName : string) : Task<BasketViewModel>
+    + <<async>> Map(basket : Basket) : Task<BasketViewModel>
+    + <<async>> CountTotalBasketItems(username : string) : Task<int>
+}
+IBasketViewModelService <|.. BasketViewModelService
+@enduml

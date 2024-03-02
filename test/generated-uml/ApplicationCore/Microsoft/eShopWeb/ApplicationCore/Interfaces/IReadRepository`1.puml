@@ -1,0 +1,6 @@
+@startuml IReadRepository`1
+interface IReadRepository`1<T>  {
+
+}
+"IReadRepositoryBase`1" <|.. "IReadRepository`1"
+@enduml

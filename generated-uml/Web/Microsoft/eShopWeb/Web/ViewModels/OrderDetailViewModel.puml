@@ -1,0 +1,10 @@
+@startuml OrderDetailViewModel
+!include ./OrderViewModel.puml
+!include ./OrderItemViewModel.puml
+class OrderDetailViewModel  {
+    + OrderItems : List<OrderItemViewModel> <<get>> <<set>>
+    + OrderDetailViewModel()
+}
+OrderViewModel <|-- OrderDetailViewModel
+OrderDetailViewModel *-- "*" OrderItemViewModel : OrderItems
+@enduml

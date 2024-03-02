@@ -1,0 +1,5 @@
+@startuml ICatalogLookupDataService`1
+interface ICatalogLookupDataService`1<TLookupData>  {
+    + List() : Task<List<TLookupData>>
+}
+@enduml

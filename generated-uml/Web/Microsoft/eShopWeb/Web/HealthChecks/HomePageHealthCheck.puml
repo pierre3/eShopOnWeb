@@ -1,0 +1,7 @@
+@startuml HomePageHealthCheck
+class HomePageHealthCheck  {
+    + HomePageHealthCheck(httpContextAccessor : IHttpContextAccessor)
+    + <<async>> CheckHealthAsync(context : HealthCheckContext, cancellationToken : CancellationToken) : Task<HealthCheckResult>
+}
+IHealthCheck <|.. HomePageHealthCheck
+@enduml

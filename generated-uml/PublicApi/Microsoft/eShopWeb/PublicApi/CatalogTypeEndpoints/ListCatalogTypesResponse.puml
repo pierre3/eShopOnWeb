@@ -1,0 +1,11 @@
+@startuml ListCatalogTypesResponse
+!include ../BaseResponse.puml
+!include ./CatalogTypeDto.puml
+class ListCatalogTypesResponse  {
+    + ListCatalogTypesResponse(correlationId : Guid)
+    + ListCatalogTypesResponse()
+    + CatalogTypes : List<CatalogTypeDto> <<get>> <<set>>
+}
+BaseResponse <|-- ListCatalogTypesResponse
+ListCatalogTypesResponse *-- "*" CatalogTypeDto : CatalogTypes
+@enduml

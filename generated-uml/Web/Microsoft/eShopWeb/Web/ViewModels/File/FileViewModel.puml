@@ -1,0 +1,8 @@
+@startuml FileViewModel
+class FileViewModel  {
+    + FileName : string? <<get>> <<set>>
+    + Url : string? <<get>> <<set>>
+    + DataBase64 : string? <<get>> <<set>>
+    + FileViewModel()
+}
+@enduml

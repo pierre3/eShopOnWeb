@@ -1,0 +1,7 @@
+@startuml BaseRequest
+!include ./BaseMessage.puml
+abstract class BaseRequest  {
+    # BaseRequest()
+}
+BaseMessage <|-- BaseRequest
+@enduml

@@ -1,0 +1,5 @@
+@startuml EmailSenderExtensions
+class EmailSenderExtensions <<static>>  {
+    + {static} SendEmailConfirmationAsync(emailSender : IEmailSender, email : string, link : string) : Task
+}
+@enduml

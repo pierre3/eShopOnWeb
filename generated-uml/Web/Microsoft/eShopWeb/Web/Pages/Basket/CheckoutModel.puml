@@ -1,0 +1,13 @@
+@startuml CheckoutModel
+!include ../../Interfaces/IBasketViewModelService.puml
+!include ./BasketViewModel.puml
+class CheckoutModel  {
+    + CheckoutModel(basketService : IBasketService, basketViewModelService : IBasketViewModelService, signInManager : SignInManager<ApplicationUser>, orderService : IOrderService, logger : IAppLogger<CheckoutModel>)
+    + BasketModel : BasketViewModel <<get>> <<set>>
+    + <<async>> OnGet() : Task
+    + <<async>> OnPost(items : IEnumerable<BasketItemViewModel>) : Task<IActionResult>
+}
+PageModel <|-- CheckoutModel
+CheckoutModel ..> IBasketViewModelService
+CheckoutModel *-- BasketViewModel : BasketModel
+@enduml

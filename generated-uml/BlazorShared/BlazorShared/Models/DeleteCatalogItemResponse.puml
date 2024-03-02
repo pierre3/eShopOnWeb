@@ -1,0 +1,6 @@
+@startuml DeleteCatalogItemResponse
+class DeleteCatalogItemResponse  {
+    + Status : string <<get>> <<set>>
+    + DeleteCatalogItemResponse()
+}
+@enduml

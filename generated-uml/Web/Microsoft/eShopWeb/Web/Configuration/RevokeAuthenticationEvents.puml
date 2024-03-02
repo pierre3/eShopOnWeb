@@ -1,0 +1,7 @@
+@startuml RevokeAuthenticationEvents
+class RevokeAuthenticationEvents  {
+    + RevokeAuthenticationEvents(cache : IMemoryCache, logger : ILogger<RevokeAuthenticationEvents>)
+    + <<override>> <<async>> ValidatePrincipal(context : CookieValidatePrincipalContext) : Task
+}
+CookieAuthenticationEvents <|-- RevokeAuthenticationEvents
+@enduml

@@ -1,0 +1,14 @@
+@startuml EditCatalogItemModel
+!include ../../Interfaces/ICatalogItemViewModelService.puml
+!include ../../ViewModels/CatalogItemViewModel.puml
+class EditCatalogItemModel  {
+    + EditCatalogItemModel(catalogItemViewModelService : ICatalogItemViewModelService)
+    + CatalogModel : CatalogItemViewModel <<get>> <<set>>
+    + OnGet(catalogModel : CatalogItemViewModel) : void
+    + <<async>> OnPostAsync() : Task<IActionResult>
+}
+PageModel <|-- EditCatalogItemModel
+EditCatalogItemModel ..> ICatalogItemViewModelService
+EditCatalogItemModel *-- CatalogItemViewModel : CatalogModel
+EditCatalogItemModel ..> CatalogItemViewModel
+@enduml

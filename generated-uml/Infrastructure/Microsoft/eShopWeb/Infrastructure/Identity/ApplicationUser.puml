@@ -1,0 +1,6 @@
+@startuml ApplicationUser
+class ApplicationUser  {
+    + ApplicationUser()
+}
+IdentityUser <|-- ApplicationUser
+@enduml

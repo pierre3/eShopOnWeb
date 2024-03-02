@@ -1,0 +1,7 @@
+@startuml AppIdentityDbContext
+class AppIdentityDbContext  {
+    + AppIdentityDbContext(options : DbContextOptions<AppIdentityDbContext>)
+    # <<override>> OnModelCreating(builder : ModelBuilder) : void
+}
+"IdentityDbContext`1" "<ApplicationUser>" <|-- AppIdentityDbContext
+@enduml

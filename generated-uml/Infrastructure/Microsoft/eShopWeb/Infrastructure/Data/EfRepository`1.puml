@@ -1,0 +1,10 @@
+@startuml EfRepository`1
+!include ./CatalogContext.puml
+class EfRepository`1<T>  {
+    + EfRepository(dbContext : CatalogContext)
+}
+"RepositoryBase`1" <|-- "EfRepository`1"
+"IReadRepository`1" <|.. "EfRepository`1"
+"IRepository`1" <|.. "EfRepository`1"
+"EfRepository`1" ..> CatalogContext
+@enduml

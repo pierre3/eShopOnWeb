@@ -1,0 +1,10 @@
+@startuml UpdateCatalogItemEndpoint
+!include ./UpdateCatalogItemRequest.puml
+class UpdateCatalogItemEndpoint  {
+    + UpdateCatalogItemEndpoint(uriComposer : IUriComposer)
+    + AddRoute(app : IEndpointRouteBuilder) : void
+    + <<async>> HandleAsync(request : UpdateCatalogItemRequest, itemRepository : IRepository<CatalogItem>) : Task<IResult>
+}
+"IEndpoint`3" "<IResult, UpdateCatalogItemRequest, IRepository>" <|.. UpdateCatalogItemEndpoint
+UpdateCatalogItemEndpoint ..> UpdateCatalogItemRequest
+@enduml

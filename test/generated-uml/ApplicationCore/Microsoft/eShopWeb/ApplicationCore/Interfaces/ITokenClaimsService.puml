@@ -1,0 +1,5 @@
+@startuml ITokenClaimsService
+interface ITokenClaimsService  {
+    + GetTokenAsync(userName : string) : Task<string>
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml CustomSchemaFilters
+class CustomSchemaFilters  {
+    + Apply(schema : OpenApiSchema, context : SchemaFilterContext) : void
+    + CustomSchemaFilters()
+}
+ISchemaFilter <|.. CustomSchemaFilters
+@enduml

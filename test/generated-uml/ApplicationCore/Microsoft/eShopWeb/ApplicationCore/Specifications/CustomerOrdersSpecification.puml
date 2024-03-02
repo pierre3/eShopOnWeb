@@ -1,0 +1,6 @@
+@startuml CustomerOrdersSpecification
+class CustomerOrdersSpecification  {
+    + CustomerOrdersSpecification(buyerId : string)
+}
+"Specification`1" "<Order>" <|-- CustomerOrdersSpecification
+@enduml

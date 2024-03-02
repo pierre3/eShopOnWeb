@@ -1,0 +1,8 @@
+@startuml IBasketService
+interface IBasketService  {
+    + TransferBasketAsync(anonymousId : string, userName : string) : Task
+    + AddItemToBasket(username : string, catalogItemId : int, price : decimal, quantity : int) : Task<Basket>
+    + SetQuantities(basketId : int, quantities : Dictionary<string, int>) : Task<Result<Basket>>
+    + DeleteBasketAsync(basketId : int) : Task
+}
+@enduml

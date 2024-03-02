@@ -1,0 +1,7 @@
+@startuml IdentityHostingStartup
+class IdentityHostingStartup  {
+    + Configure(builder : IWebHostBuilder) : void
+    + IdentityHostingStartup()
+}
+IHostingStartup <|.. IdentityHostingStartup
+@enduml

@@ -1,0 +1,7 @@
+@startuml IdentityTokenClaimService
+class IdentityTokenClaimService  {
+    + IdentityTokenClaimService(userManager : UserManager<ApplicationUser>)
+    + <<async>> GetTokenAsync(userName : string) : Task<string>
+}
+ITokenClaimsService <|.. IdentityTokenClaimService
+@enduml

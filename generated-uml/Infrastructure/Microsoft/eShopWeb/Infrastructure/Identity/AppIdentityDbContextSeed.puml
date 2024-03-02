@@ -1,0 +1,8 @@
+@startuml AppIdentityDbContextSeed
+!include ./AppIdentityDbContext.puml
+class AppIdentityDbContextSeed  {
+    + {static} <<async>> SeedAsync(identityDbContext : AppIdentityDbContext, userManager : UserManager<ApplicationUser>, roleManager : RoleManager<IdentityRole>) : Task
+    + AppIdentityDbContextSeed()
+}
+AppIdentityDbContextSeed ..> AppIdentityDbContext
+@enduml

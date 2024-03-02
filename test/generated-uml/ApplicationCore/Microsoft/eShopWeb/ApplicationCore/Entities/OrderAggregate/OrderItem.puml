@@ -1,0 +1,13 @@
+@startuml OrderItem
+!include ../BaseEntity.puml
+!include ./CatalogItemOrdered.puml
+class OrderItem  {
+    + ItemOrdered : CatalogItemOrdered <<get>> <<private set>>
+    + UnitPrice : decimal <<get>> <<private set>>
+    + Units : int <<get>> <<private set>>
+    + OrderItem(itemOrdered : CatalogItemOrdered, unitPrice : decimal, units : int)
+}
+BaseEntity <|-- OrderItem
+OrderItem o-- CatalogItemOrdered : ItemOrdered
+OrderItem ..> CatalogItemOrdered
+@enduml

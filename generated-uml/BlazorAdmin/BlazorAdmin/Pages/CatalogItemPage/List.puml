@@ -1,0 +1,16 @@
+@startuml List
+!include ../../Helpers/BlazorComponent.puml
+!include ../../../../BlazorShared/BlazorShared/Interfaces/ICatalogItemService.puml
+!include ../../../../BlazorShared/BlazorShared/Interfaces/ICatalogLookupDataService`1.puml
+class List  {
+    + CatalogItemService : ICatalogItemService <<get>> <<set>>
+    + CatalogBrandService : ICatalogLookupDataService<CatalogBrand> <<get>> <<set>>
+    + CatalogTypeService : ICatalogLookupDataService<CatalogType> <<get>> <<set>>
+    # <<override>> <<async>> OnAfterRenderAsync(firstRender : bool) : Task
+    + List()
+}
+BlazorComponent <|-- List
+List o-- ICatalogItemService : CatalogItemService
+List o-- "<CatalogBrand>" "ICatalogLookupDataService`1" : CatalogBrandService
+List o-- "<CatalogType>" "ICatalogLookupDataService`1" : CatalogTypeService
+@enduml

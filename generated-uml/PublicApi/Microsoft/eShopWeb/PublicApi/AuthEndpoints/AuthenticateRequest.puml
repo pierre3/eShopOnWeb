@@ -1,0 +1,9 @@
+@startuml AuthenticateRequest
+!include ../BaseRequest.puml
+class AuthenticateRequest  {
+    + Username : string <<get>> <<set>>
+    + Password : string <<get>> <<set>>
+    + AuthenticateRequest()
+}
+BaseRequest <|-- AuthenticateRequest
+@enduml

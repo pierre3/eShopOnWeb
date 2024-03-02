@@ -1,0 +1,6 @@
+@startuml Route
+class Route  {
+    + Route(jsRuntime : IJSRuntime)
+    + <<async>> RouteOutside(path : string) : Task
+}
+@enduml

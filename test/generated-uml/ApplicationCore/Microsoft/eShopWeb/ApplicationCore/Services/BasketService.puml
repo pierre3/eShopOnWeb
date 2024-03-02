@@ -1,0 +1,15 @@
+@startuml BasketService
+!include ../Interfaces/IBasketService.puml
+!include ../Interfaces/IRepository`1.puml
+!include ../Interfaces/IAppLogger`1.puml
+class BasketService  {
+    + BasketService(basketRepository : IRepository<Basket>, logger : IAppLogger<BasketService>)
+    + <<async>> AddItemToBasket(username : string, catalogItemId : int, price : decimal, quantity : int) : Task<Basket>
+    + <<async>> DeleteBasketAsync(basketId : int) : Task
+    + <<async>> SetQuantities(basketId : int, quantities : Dictionary<string, int>) : Task<Result<Basket>>
+    + <<async>> TransferBasketAsync(anonymousId : string, userName : string) : Task
+}
+IBasketService <|.. BasketService
+BasketService ..> "<Basket>" "IRepository`1"
+BasketService ..> "<BasketService>" "IAppLogger`1"
+@enduml

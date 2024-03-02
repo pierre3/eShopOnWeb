@@ -1,0 +1,8 @@
+@startuml EnableAuthenticatorViewModel
+class EnableAuthenticatorViewModel  {
+    + Code : string? <<get>> <<set>>
+    + SharedKey : string? <<get>> <<set>>
+    + AuthenticatorUri : string? <<get>> <<set>>
+    + EnableAuthenticatorViewModel()
+}
+@enduml

@@ -1,0 +1,8 @@
+@startuml CreateCatalogItemResponse
+!include ./CatalogItem.puml
+class CreateCatalogItemResponse  {
+    + CatalogItem : CatalogItem <<get>> <<set>>
+    + CreateCatalogItemResponse()
+}
+CreateCatalogItemResponse *-- CatalogItem : CatalogItem
+@enduml

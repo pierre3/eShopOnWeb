@@ -1,0 +1,11 @@
+@startuml UpdateCatalogItemResponse
+!include ../BaseResponse.puml
+!include ./CatalogItemDto.puml
+class UpdateCatalogItemResponse  {
+    + UpdateCatalogItemResponse(correlationId : Guid)
+    + UpdateCatalogItemResponse()
+    + CatalogItem : CatalogItemDto <<get>> <<set>>
+}
+BaseResponse <|-- UpdateCatalogItemResponse
+UpdateCatalogItemResponse o-- CatalogItemDto : CatalogItem
+@enduml

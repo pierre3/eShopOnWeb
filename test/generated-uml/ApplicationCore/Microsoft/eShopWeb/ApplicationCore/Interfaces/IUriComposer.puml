@@ -1,0 +1,5 @@
+@startuml IUriComposer
+interface IUriComposer  {
+    + ComposePicUri(uriTemplate : string) : string
+}
+@enduml

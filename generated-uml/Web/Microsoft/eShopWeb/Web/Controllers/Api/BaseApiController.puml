@@ -1,0 +1,6 @@
+@startuml BaseApiController
+class BaseApiController  {
+    + BaseApiController()
+}
+ControllerBase <|-- BaseApiController
+@enduml

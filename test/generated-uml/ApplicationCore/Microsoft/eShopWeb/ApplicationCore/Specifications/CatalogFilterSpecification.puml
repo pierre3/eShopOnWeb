@@ -1,0 +1,6 @@
+@startuml CatalogFilterSpecification
+class CatalogFilterSpecification  {
+    + CatalogFilterSpecification(brandId : int?, typeId : int?)
+}
+"Specification`1" "<CatalogItem>" <|-- CatalogFilterSpecification
+@enduml

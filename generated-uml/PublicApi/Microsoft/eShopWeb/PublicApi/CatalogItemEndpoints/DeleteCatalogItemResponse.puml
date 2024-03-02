@@ -1,0 +1,9 @@
+@startuml DeleteCatalogItemResponse
+!include ../BaseResponse.puml
+class DeleteCatalogItemResponse  {
+    + DeleteCatalogItemResponse(correlationId : Guid)
+    + DeleteCatalogItemResponse()
+    + Status : string <<get>> <<set>>
+}
+BaseResponse <|-- DeleteCatalogItemResponse
+@enduml

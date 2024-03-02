@@ -1,0 +1,8 @@
+@startuml TwoFactorAuthenticationViewModel
+class TwoFactorAuthenticationViewModel  {
+    + HasAuthenticator : bool <<get>> <<set>>
+    + RecoveryCodesLeft : int <<get>> <<set>>
+    + Is2faEnabled : bool <<get>> <<set>>
+    + TwoFactorAuthenticationViewModel()
+}
+@enduml

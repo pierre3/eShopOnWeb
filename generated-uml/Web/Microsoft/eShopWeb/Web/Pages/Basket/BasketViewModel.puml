@@ -1,0 +1,11 @@
+@startuml BasketViewModel
+!include ./BasketItemViewModel.puml
+class BasketViewModel  {
+    + Id : int <<get>> <<set>>
+    + Items : List<BasketItemViewModel> <<get>> <<set>>
+    + BuyerId : string? <<get>> <<set>>
+    + Total() : decimal
+    + BasketViewModel()
+}
+BasketViewModel *-- "*" BasketItemViewModel : Items
+@enduml

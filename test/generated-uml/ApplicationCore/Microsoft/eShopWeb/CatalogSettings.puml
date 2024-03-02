@@ -1,0 +1,6 @@
+@startuml CatalogSettings
+class CatalogSettings  {
+    + CatalogBaseUrl : string? <<get>> <<set>>
+    + CatalogSettings()
+}
+@enduml

@@ -1,0 +1,7 @@
+@startuml BaseMessage
+abstract class BaseMessage  {
+    # _correlationId : Guid
+    + CorrelationId() : Guid
+    # BaseMessage()
+}
+@enduml

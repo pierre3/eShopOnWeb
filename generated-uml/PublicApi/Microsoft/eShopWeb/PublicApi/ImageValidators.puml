@@ -1,0 +1,5 @@
+@startuml ImageValidators
+class ImageValidators <<static>>  {
+    + {static} IsValidImage(postedFile : byte[], fileName : string) : bool
+}
+@enduml

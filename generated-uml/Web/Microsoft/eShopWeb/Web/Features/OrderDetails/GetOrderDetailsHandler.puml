@@ -1,0 +1,9 @@
+@startuml GetOrderDetailsHandler
+!include ./GetOrderDetails.puml
+class GetOrderDetailsHandler  {
+    + GetOrderDetailsHandler(orderRepository : IReadRepository<Order>)
+    + <<async>> Handle(request : GetOrderDetails, cancellationToken : CancellationToken) : Task<OrderDetailViewModel?>
+}
+"IRequestHandler`2" "<GetOrderDetails, OrderDetailViewModel>" <|.. GetOrderDetailsHandler
+GetOrderDetailsHandler ..> GetOrderDetails
+@enduml

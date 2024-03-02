@@ -1,0 +1,5 @@
+@startuml ILookupDataResponse`1
+interface ILookupDataResponse`1<TLookupData>  {
+    + List : List<TLookupData> <<get>> <<set>>
+}
+@enduml

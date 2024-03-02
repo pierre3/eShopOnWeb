@@ -1,0 +1,16 @@
+@startuml UpdateCatalogItemRequest
+!include ../BaseRequest.puml
+class UpdateCatalogItemRequest  {
+    + Id : int <<get>> <<set>>
+    + CatalogBrandId : int <<get>> <<set>>
+    + CatalogTypeId : int <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + PictureBase64 : string <<get>> <<set>>
+    + PictureUri : string <<get>> <<set>>
+    + PictureName : string <<get>> <<set>>
+    + Price : decimal <<get>> <<set>>
+    + UpdateCatalogItemRequest()
+}
+BaseRequest <|-- UpdateCatalogItemRequest
+@enduml

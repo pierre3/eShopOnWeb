@@ -1,0 +1,8 @@
+@startuml CatalogItemOrdered
+class CatalogItemOrdered  {
+    + CatalogItemOrdered(catalogItemId : int, productName : string, pictureUri : string)
+    + CatalogItemId : int <<get>> <<private set>>
+    + ProductName : string <<get>> <<private set>>
+    + PictureUri : string <<get>> <<private set>>
+}
+@enduml

@@ -1,0 +1,8 @@
+@startuml AuthorizationConstants
+class AuthorizationConstants  {
+    + {static} AUTH_KEY : string
+    + {static} DEFAULT_PASSWORD : string
+    + {static} JWT_SECRET_KEY : string
+    + AuthorizationConstants()
+}
+@enduml

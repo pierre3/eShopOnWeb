@@ -1,0 +1,8 @@
+@startuml LoginModel::InputModel
+class LoginModel::InputModel  {
+    + Email : string? <<get>> <<set>>
+    + Password : string? <<get>> <<set>>
+    + RememberMe : bool <<get>> <<set>>
+    + InputModel()
+}
+@enduml

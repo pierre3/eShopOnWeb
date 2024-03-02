@@ -1,0 +1,14 @@
+@startuml CatalogContext
+class CatalogContext  {
+    + CatalogContext(options : DbContextOptions<CatalogContext>)
+    + Baskets : DbSet<Basket> <<get>> <<set>>
+    + CatalogItems : DbSet<CatalogItem> <<get>> <<set>>
+    + CatalogBrands : DbSet<CatalogBrand> <<get>> <<set>>
+    + CatalogTypes : DbSet<CatalogType> <<get>> <<set>>
+    + Orders : DbSet<Order> <<get>> <<set>>
+    + OrderItems : DbSet<OrderItem> <<get>> <<set>>
+    + BasketItems : DbSet<BasketItem> <<get>> <<set>>
+    # <<override>> OnModelCreating(builder : ModelBuilder) : void
+}
+DbContext <|-- CatalogContext
+@enduml

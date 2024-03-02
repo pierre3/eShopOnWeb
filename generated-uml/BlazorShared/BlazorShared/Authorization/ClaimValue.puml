@@ -1,0 +1,8 @@
+@startuml ClaimValue
+class ClaimValue  {
+    + ClaimValue()
+    + ClaimValue(type : string, value : string)
+    + Type : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+@enduml

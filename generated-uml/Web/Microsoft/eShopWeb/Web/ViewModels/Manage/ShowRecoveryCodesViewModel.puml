@@ -1,0 +1,6 @@
+@startuml ShowRecoveryCodesViewModel
+class ShowRecoveryCodesViewModel  {
+    + RecoveryCodes : string[]? <<get>> <<set>>
+    + ShowRecoveryCodesViewModel()
+}
+@enduml

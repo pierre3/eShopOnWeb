@@ -1,0 +1,15 @@
+@startuml CatalogIndexViewModel
+!include ./CatalogItemViewModel.puml
+!include ./PaginationInfoViewModel.puml
+class CatalogIndexViewModel  {
+    + CatalogItems : List<CatalogItemViewModel> <<get>> <<set>>
+    + Brands : List<SelectListItem>? <<get>> <<set>>
+    + Types : List<SelectListItem>? <<get>> <<set>>
+    + BrandFilterApplied : int? <<get>> <<set>>
+    + TypesFilterApplied : int? <<get>> <<set>>
+    + PaginationInfo : PaginationInfoViewModel? <<get>> <<set>>
+    + CatalogIndexViewModel()
+}
+CatalogIndexViewModel *-- "*" CatalogItemViewModel : CatalogItems
+CatalogIndexViewModel o-- PaginationInfoViewModel : PaginationInfo
+@enduml

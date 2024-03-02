@@ -1,0 +1,14 @@
+@startuml ToastComponent
+class ToastComponent  {
+    # Heading : string <<get>> <<set>>
+    # Message : string <<get>> <<set>>
+    # IsVisible : bool <<get>> <<set>>
+    # BackgroundCssClass : string <<get>> <<set>>
+    # IconCssClass : string <<get>> <<set>>
+    # <<override>> OnInitialized() : void
+    + Dispose() : void
+    + ToastComponent()
+}
+ComponentBase <|-- ToastComponent
+IDisposable <|.. ToastComponent
+@enduml

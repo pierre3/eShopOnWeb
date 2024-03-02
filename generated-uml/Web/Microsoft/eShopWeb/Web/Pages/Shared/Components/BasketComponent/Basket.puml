@@ -1,0 +1,9 @@
+@startuml Basket
+!include ../../../../Interfaces/IBasketViewModelService.puml
+class Basket  {
+    + Basket(basketService : IBasketViewModelService, signInManager : SignInManager<ApplicationUser>)
+    + <<async>> InvokeAsync() : Task<IViewComponentResult>
+}
+ViewComponent <|-- Basket
+Basket ..> IBasketViewModelService
+@enduml

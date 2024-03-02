@@ -1,0 +1,15 @@
+@startuml LoginModel
+!include ./LoginModel.InputModel.puml
+class LoginModel  {
+    + LoginModel(signInManager : SignInManager<ApplicationUser>, logger : ILogger<LoginModel>, basketService : IBasketService)
+    + <<required>> Input : InputModel <<get>> <<set>>
+    + ExternalLogins : IList<AuthenticationScheme>? <<get>> <<set>>
+    + ReturnUrl : string? <<get>> <<set>>
+    + ErrorMessage : string? <<get>> <<set>>
+    + <<async>> OnGetAsync(returnUrl : string?) : Task
+    + <<async>> OnPostAsync(returnUrl : string?) : Task<IActionResult>
+}
+PageModel <|-- LoginModel
+LoginModel o-- LoginModel::InputModel : Input
+LoginModel +.. LoginModel::InputModel
+@enduml

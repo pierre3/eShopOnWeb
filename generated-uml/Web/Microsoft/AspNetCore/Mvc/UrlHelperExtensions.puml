@@ -1,0 +1,5 @@
+@startuml UrlHelperExtensions
+class UrlHelperExtensions <<static>>  {
+    + {static} EmailConfirmationLink(urlHelper : IUrlHelper, userId : string, code : string, scheme : string) : string?
+}
+@enduml

@@ -1,0 +1,11 @@
+@startuml PaginationInfoViewModel
+class PaginationInfoViewModel  {
+    + TotalItems : int <<get>> <<set>>
+    + ItemsPerPage : int <<get>> <<set>>
+    + ActualPage : int <<get>> <<set>>
+    + TotalPages : int <<get>> <<set>>
+    + Previous : string? <<get>> <<set>>
+    + Next : string? <<get>> <<set>>
+    + PaginationInfoViewModel()
+}
+@enduml

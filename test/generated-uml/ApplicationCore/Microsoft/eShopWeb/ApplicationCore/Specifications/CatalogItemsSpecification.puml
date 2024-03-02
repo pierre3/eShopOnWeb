@@ -1,0 +1,6 @@
+@startuml CatalogItemsSpecification
+class CatalogItemsSpecification  {
+    + CatalogItemsSpecification(ids : int[])
+}
+"Specification`1" "<CatalogItem>" <|-- CatalogItemsSpecification
+@enduml

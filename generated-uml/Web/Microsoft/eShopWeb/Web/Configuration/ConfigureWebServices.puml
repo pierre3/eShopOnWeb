@@ -1,0 +1,5 @@
+@startuml ConfigureWebServices
+class ConfigureWebServices <<static>>  {
+    + {static} AddWebServices(services : IServiceCollection, configuration : IConfiguration) : IServiceCollection
+}
+@enduml

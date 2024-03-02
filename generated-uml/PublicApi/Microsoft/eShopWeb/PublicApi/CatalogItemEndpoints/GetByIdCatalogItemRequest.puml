@@ -1,0 +1,8 @@
+@startuml GetByIdCatalogItemRequest
+!include ../BaseRequest.puml
+class GetByIdCatalogItemRequest  {
+    + CatalogItemId : int <<get>> <<set>>
+    + GetByIdCatalogItemRequest(catalogItemId : int)
+}
+BaseRequest <|-- GetByIdCatalogItemRequest
+@enduml

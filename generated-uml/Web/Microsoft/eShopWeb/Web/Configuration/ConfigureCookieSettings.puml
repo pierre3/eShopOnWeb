@@ -1,0 +1,7 @@
+@startuml ConfigureCookieSettings
+class ConfigureCookieSettings <<static>>  {
+    + {static} ValidityMinutesPeriod : int
+    + {static} IdentifierCookieName : string
+    + {static} AddCookieSettings(services : IServiceCollection) : IServiceCollection
+}
+@enduml

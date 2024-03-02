@@ -1,0 +1,7 @@
+@startuml CatalogType
+!include ./LookupData.puml
+class CatalogType  {
+    + CatalogType()
+}
+LookupData <|-- CatalogType
+@enduml

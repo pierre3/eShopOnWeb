@@ -1,0 +1,7 @@
+@startuml CatalogTypeDto
+class CatalogTypeDto  {
+    + Id : int <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + CatalogTypeDto()
+}
+@enduml

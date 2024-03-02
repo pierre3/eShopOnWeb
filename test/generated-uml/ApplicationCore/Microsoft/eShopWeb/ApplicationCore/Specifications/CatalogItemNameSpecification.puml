@@ -1,0 +1,6 @@
+@startuml CatalogItemNameSpecification
+class CatalogItemNameSpecification  {
+    + CatalogItemNameSpecification(catalogItemName : string)
+}
+"Specification`1" "<CatalogItem>" <|-- CatalogItemNameSpecification
+@enduml

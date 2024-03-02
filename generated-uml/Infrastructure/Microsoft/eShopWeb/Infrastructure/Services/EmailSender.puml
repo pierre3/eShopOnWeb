@@ -1,0 +1,7 @@
+@startuml EmailSender
+class EmailSender  {
+    + SendEmailAsync(email : string, subject : string, message : string) : Task
+    + EmailSender()
+}
+IEmailSender <|.. EmailSender
+@enduml

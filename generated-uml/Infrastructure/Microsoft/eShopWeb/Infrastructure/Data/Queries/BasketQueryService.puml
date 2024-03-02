@@ -1,0 +1,9 @@
+@startuml BasketQueryService
+!include ../CatalogContext.puml
+class BasketQueryService  {
+    + BasketQueryService(dbContext : CatalogContext)
+    + <<async>> CountTotalBasketItems(username : string) : Task<int>
+}
+IBasketQueryService <|.. BasketQueryService
+BasketQueryService ..> CatalogContext
+@enduml

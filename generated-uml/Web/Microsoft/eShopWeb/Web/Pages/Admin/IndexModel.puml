@@ -1,0 +1,6 @@
+@startuml IndexModel
+class IndexModel  {
+    + IndexModel()
+}
+PageModel <|-- IndexModel
+@enduml

@@ -1,0 +1,17 @@
+@startuml Basket
+!include ../BaseEntity.puml
+!include ../../Interfaces/IAggregateRoot.puml
+!include ./BasketItem.puml
+class Basket  {
+    + BuyerId : string <<get>> <<private set>>
+    + <<readonly>> Items : IReadOnlyCollection<BasketItem> <<get>>
+    + <<readonly>> TotalItems : int <<get>>
+    + Basket(buyerId : string)
+    + AddItem(catalogItemId : int, unitPrice : decimal, quantity : int) : void
+    + RemoveEmptyItems() : void
+    + SetNewBuyerId(buyerId : string) : void
+}
+BaseEntity <|-- Basket
+IAggregateRoot <|.. Basket
+Basket o-- "*" BasketItem : Items
+@enduml

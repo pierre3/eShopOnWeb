@@ -1,0 +1,5 @@
+@startuml IEmailSender
+interface IEmailSender  {
+    + SendEmailAsync(email : string, subject : string, message : string) : Task
+}
+@enduml

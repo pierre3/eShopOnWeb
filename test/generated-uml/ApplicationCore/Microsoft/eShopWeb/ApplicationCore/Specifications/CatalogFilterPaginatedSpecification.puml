@@ -1,0 +1,6 @@
+@startuml CatalogFilterPaginatedSpecification
+class CatalogFilterPaginatedSpecification  {
+    + CatalogFilterPaginatedSpecification(skip : int, take : int, brandId : int?, typeId : int?)
+}
+"Specification`1" "<CatalogItem>" <|-- CatalogFilterPaginatedSpecification
+@enduml

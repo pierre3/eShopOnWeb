@@ -1,0 +1,7 @@
+@startuml LookupData
+abstract class LookupData  {
+    + Id : int <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    # LookupData()
+}
+@enduml

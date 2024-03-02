@@ -1,0 +1,10 @@
+@startuml UriComposer
+!include ../Interfaces/IUriComposer.puml
+!include ../../CatalogSettings.puml
+class UriComposer  {
+    + UriComposer(catalogSettings : CatalogSettings)
+    + ComposePicUri(uriTemplate : string) : string
+}
+IUriComposer <|.. UriComposer
+UriComposer ..> CatalogSettings
+@enduml

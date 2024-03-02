@@ -1,0 +1,9 @@
+@startuml FixShipToAddress
+class FixShipToAddress  {
+    # <<override>> BuildTargetModel(modelBuilder : ModelBuilder) : void
+    # <<override>> Up(migrationBuilder : MigrationBuilder) : void
+    # <<override>> Down(migrationBuilder : MigrationBuilder) : void
+    + FixShipToAddress()
+}
+Migration <|-- FixShipToAddress
+@enduml

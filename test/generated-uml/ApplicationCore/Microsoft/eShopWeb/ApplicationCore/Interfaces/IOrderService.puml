@@ -1,0 +1,7 @@
+@startuml IOrderService
+!include ../Entities/OrderAggregate/Address.puml
+interface IOrderService  {
+    + CreateOrderAsync(basketId : int, shippingAddress : Address) : Task
+}
+IOrderService ..> Address
+@enduml

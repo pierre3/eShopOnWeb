@@ -1,0 +1,7 @@
+@startuml IBasketViewModelService
+interface IBasketViewModelService  {
+    + GetOrCreateBasketForUser(userName : string) : Task<BasketViewModel>
+    + CountTotalBasketItems(username : string) : Task<int>
+    + Map(basket : Basket) : Task<BasketViewModel>
+}
+@enduml

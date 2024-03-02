@@ -1,0 +1,7 @@
+@startuml EndpointAttribute
+class EndpointAttribute  {
+    + Name : string <<get>> <<set>>
+    + EndpointAttribute()
+}
+Attribute <|-- EndpointAttribute
+@enduml

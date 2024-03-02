@@ -1,0 +1,9 @@
+@startuml AuthenticateEndpoint
+!include ./AuthenticateRequest.puml
+class AuthenticateEndpoint  {
+    + AuthenticateEndpoint(signInManager : SignInManager<ApplicationUser>, tokenClaimsService : ITokenClaimsService)
+    + <<override>> <<async>> HandleAsync(request : AuthenticateRequest, cancellationToken : CancellationToken) : Task<ActionResult<AuthenticateResponse>>
+}
+"EndpointBaseAsync::WithRequest::WithActionResult`1" "<AuthenticateResponse>" <|-- AuthenticateEndpoint
+AuthenticateEndpoint ..> AuthenticateRequest
+@enduml

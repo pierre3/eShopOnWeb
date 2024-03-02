@@ -1,0 +1,8 @@
+@startuml UserController
+class UserController  {
+    + UserController(tokenClaimsService : ITokenClaimsService, signInManager : SignInManager<ApplicationUser>, logger : ILogger<UserController>, cache : IMemoryCache)
+    + <<async>> GetCurrentUser() : Task<IActionResult>
+    + <<async>> Logout() : Task<IActionResult>
+}
+ControllerBase <|-- UserController
+@enduml

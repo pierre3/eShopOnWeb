@@ -1,0 +1,7 @@
+@startuml PrivacyModel
+class PrivacyModel  {
+    + OnGet() : void
+    + PrivacyModel()
+}
+PageModel <|-- PrivacyModel
+@enduml

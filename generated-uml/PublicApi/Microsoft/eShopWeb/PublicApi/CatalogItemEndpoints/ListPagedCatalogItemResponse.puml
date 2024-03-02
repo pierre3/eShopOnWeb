@@ -1,0 +1,12 @@
+@startuml ListPagedCatalogItemResponse
+!include ../BaseResponse.puml
+!include ./CatalogItemDto.puml
+class ListPagedCatalogItemResponse  {
+    + ListPagedCatalogItemResponse(correlationId : Guid)
+    + ListPagedCatalogItemResponse()
+    + CatalogItems : List<CatalogItemDto> <<get>> <<set>>
+    + PageCount : int <<get>> <<set>>
+}
+BaseResponse <|-- ListPagedCatalogItemResponse
+ListPagedCatalogItemResponse *-- "*" CatalogItemDto : CatalogItems
+@enduml

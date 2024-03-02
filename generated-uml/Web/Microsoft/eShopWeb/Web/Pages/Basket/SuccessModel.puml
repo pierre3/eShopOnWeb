@@ -1,0 +1,7 @@
+@startuml SuccessModel
+class SuccessModel  {
+    + OnGet() : void
+    + SuccessModel()
+}
+PageModel <|-- SuccessModel
+@enduml

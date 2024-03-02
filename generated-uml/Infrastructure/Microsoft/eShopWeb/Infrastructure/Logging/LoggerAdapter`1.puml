@@ -1,0 +1,8 @@
+@startuml LoggerAdapter`1
+class LoggerAdapter`1<T>  {
+    + LoggerAdapter(loggerFactory : ILoggerFactory)
+    + LogWarning(message : string, args : object[]) : void
+    + LogInformation(message : string, args : object[]) : void
+}
+"IAppLogger`1" <|.. "LoggerAdapter`1"
+@enduml

@@ -1,0 +1,7 @@
+@startuml CatalogItemConfiguration
+class CatalogItemConfiguration  {
+    + Configure(builder : EntityTypeBuilder<CatalogItem>) : void
+    + CatalogItemConfiguration()
+}
+"IEntityTypeConfiguration`1" "<CatalogItem>" <|.. CatalogItemConfiguration
+@enduml

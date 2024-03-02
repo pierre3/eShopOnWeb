@@ -1,0 +1,19 @@
+@startuml CachedCatalogItemServiceDecorator
+!include ../../../BlazorShared/BlazorShared/Interfaces/ICatalogItemService.puml
+!include ./CatalogItemService.puml
+!include ../../../BlazorShared/BlazorShared/Models/CreateCatalogItemRequest.puml
+!include ../../../BlazorShared/BlazorShared/Models/CatalogItem.puml
+class CachedCatalogItemServiceDecorator  {
+    + CachedCatalogItemServiceDecorator(localStorageService : ILocalStorageService, catalogItemService : CatalogItemService, logger : ILogger<CachedCatalogItemServiceDecorator>)
+    + <<async>> ListPaged(pageSize : int) : Task<List<CatalogItem>>
+    + <<async>> List() : Task<List<CatalogItem>>
+    + <<async>> GetById(id : int) : Task<CatalogItem>
+    + <<async>> Create(catalogItem : CreateCatalogItemRequest) : Task<CatalogItem>
+    + <<async>> Edit(catalogItem : CatalogItem) : Task<CatalogItem>
+    + <<async>> Delete(id : int) : Task<string>
+}
+ICatalogItemService <|.. CachedCatalogItemServiceDecorator
+CachedCatalogItemServiceDecorator ..> CatalogItemService
+CachedCatalogItemServiceDecorator ..> CreateCatalogItemRequest
+CachedCatalogItemServiceDecorator ..> CatalogItem
+@enduml

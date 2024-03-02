@@ -1,0 +1,8 @@
+@startuml CacheEntry`1
+class CacheEntry`1<T>  {
+    + CacheEntry(item : T)
+    + CacheEntry()
+    + Value : T <<get>> <<set>>
+    + DateCreated : DateTime <<get>> <<set>>
+}
+@enduml

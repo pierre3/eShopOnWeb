@@ -1,0 +1,9 @@
+@startuml InitialModel
+class InitialModel  {
+    # <<override>> Up(migrationBuilder : MigrationBuilder) : void
+    # <<override>> Down(migrationBuilder : MigrationBuilder) : void
+    # <<override>> BuildTargetModel(modelBuilder : ModelBuilder) : void
+    + InitialModel()
+}
+Migration <|-- InitialModel
+@enduml

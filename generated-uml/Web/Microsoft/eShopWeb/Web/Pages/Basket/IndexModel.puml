@@ -1,0 +1,16 @@
+@startuml IndexModel
+!include ../../Interfaces/IBasketViewModelService.puml
+!include ./BasketViewModel.puml
+!include ../../ViewModels/CatalogItemViewModel.puml
+class IndexModel  {
+    + IndexModel(basketService : IBasketService, basketViewModelService : IBasketViewModelService, itemRepository : IRepository<CatalogItem>)
+    + BasketModel : BasketViewModel <<get>> <<set>>
+    + <<async>> OnGet() : Task
+    + <<async>> OnPost(productDetails : CatalogItemViewModel) : Task<IActionResult>
+    + <<async>> OnPostUpdate(items : IEnumerable<BasketItemViewModel>) : Task
+}
+PageModel <|-- IndexModel
+IndexModel ..> IBasketViewModelService
+IndexModel *-- BasketViewModel : BasketModel
+IndexModel ..> CatalogItemViewModel
+@enduml

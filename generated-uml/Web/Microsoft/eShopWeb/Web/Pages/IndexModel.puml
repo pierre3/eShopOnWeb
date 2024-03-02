@@ -1,0 +1,13 @@
+@startuml IndexModel
+!include ../Services/ICatalogViewModelService.puml
+!include ../ViewModels/CatalogIndexViewModel.puml
+class IndexModel  {
+    + IndexModel(catalogViewModelService : ICatalogViewModelService)
+    + <<required>> CatalogModel : CatalogIndexViewModel <<get>> <<set>>
+    + <<async>> OnGet(catalogModel : CatalogIndexViewModel, pageId : int?) : Task
+}
+PageModel <|-- IndexModel
+IndexModel ..> ICatalogViewModelService
+IndexModel *-- CatalogIndexViewModel : CatalogModel
+IndexModel ..> CatalogIndexViewModel
+@enduml

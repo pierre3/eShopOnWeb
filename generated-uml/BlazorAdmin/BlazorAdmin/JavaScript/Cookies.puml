@@ -1,0 +1,7 @@
+@startuml Cookies
+class Cookies  {
+    + Cookies(jsRuntime : IJSRuntime)
+    + <<async>> DeleteCookie(name : string) : Task
+    + <<async>> GetCookie(name : string) : Task<string>
+}
+@enduml
